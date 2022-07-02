@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.school21.cinema</groupId>
+    <artifactId>Cinema</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>Cinema</name>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>sockjs-client</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+
+        <dependency><!-- needed for freemarker FreeMarkerConfigurer stuff -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20211205</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vaadin.external.google</groupId>
+            <artifactId>android-json</artifactId>
+            <version>0.0.20131108.vaadin1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.transaction/javax.transaction-api -->
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>javax.transaction-api</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <spring.version>5.3.15</spring.version>
+        <freemarker.version>2.3.31</freemarker.version>
+        <postgresql.version>42.3.2</postgresql.version>
+        <lombok.version>1.18.22</lombok.version>
+        <hibernate.version>5.6.5.Final</hibernate.version>
+        <hibernate-types.version>2.14.0</hibernate-types.version>
+        <hibernate-validator.version>7.0.3.Final</hibernate-validator.version>
+        <querydsl.version>5.0.0</querydsl.version>
+
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.cargo</groupId>
+                    <artifactId>cargo-maven3-plugin</artifactId>
+                    <version>1.9.11</version>
+                    <executions>
+                        <execution>
+                            <id>default-deploy</id>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>deploy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <container>
+                            <containerId>tomcat9x</containerId>
+                            <type>embedded</type>
+                        </container>
+                        <deployables>
+                            <deployable>
+                                <type>war</type>
+                                <location>target/${project.artifactId}-${project.version}.war</location>
+                                <properties>
+                                    <context>/</context>
+                                </properties>
+                            </deployable>
+                        </deployables>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
