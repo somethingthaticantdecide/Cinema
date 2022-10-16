@@ -1,4 +1,4 @@
-# FWA
+# Cinema (21 school project)
 compile:
 mvn clean package
 
